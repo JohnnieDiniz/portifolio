@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="João Vitor">
+    <meta name="description" content="Portifólio do João Vitor Diniz, desenvolvedor Full Stack especializado em criar experiências 
+                digitais incríveis. Conheça meus projetos e entre em contato.">
+
+    <meta name="robots" content="index, follow">
+
+    <link rel="icon" type="image/svg+xml" href="./assets/img/favicon.svg">
+
+    <title>Portifólio do João Vitor Diniz</title>
+</head>
+
+<body>
+
+    <!--Cabeçalho da minha página -->
+    <header>
+        <div class="menu-content">
+            <a href="index.html" id="titulo">
+                Portifólio do João Vitor Diniz</a>
+
+            <!--Menu de Navegação da Página-->
+            <nav>
+                <ul class="menu-list">
+                    <li><a href="#hero">Início</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#projects">Projetos</a></li>
+                    <li><a href="#contacts">Contatos</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+
+
+    <!--Seção Principal da Página-->
+    <main>
+        <!--Seção Hero -->
+        <section id="hero" class="section-container hero-container">
+            <!--Mensagens de Boas Vindas-->
+            <article>
+                <span>👋 Olá, eu sou o João Vitor!</span>
+                <h1>Desenvolvedor Full Stack</h1>
+                <p>Trnasformando ideias em experiências digitais incríveis.</p>
+
+                <div class="buttons-container">
+                    <a href="#contacts" class="button">Entre em contato</a>
+                    <a href="#about" class="button-outline">Saiba mais</a>
+                </div>
+
+            </article>
+
+            <!--Imagem da Seção Hero -->
+            <figure>
+                <img src="./assets/img/foto_dev_man.svg" width="300" alt="Foto do autor do site, João Vitor Diniz."
+                    class="float-animation">
+            </figure>
+        </section>
+
+        <!--Seção Sobre -->
+        <section id="about" class="section-container about-container">
+            <!--Imagem da Seção Sobre -->
+            <figure class="about-img">
+                <img src="./assets/img/avatar_dev_man.svg" width="300" alt="Foto do autor do site, João Vitor Diniz.">
+            </figure>
+
+            <article class="about-content">
+                <h2>Sobre mim</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem vel qui rem minus tenetur
+                    deserunt expedita dolorum repellat, quos voluptatum odio reiciendis, quasi, aspernatur quae placeat
+                    repellendus! Ea, aut? Beatae.</p>
+                <p>Mussum Ipsum, cacilds vidis litro abertis. Sapien in monti palavris qui num significa nadis i pareci
+                    latim. Quem num gosta di mim que vai caçá sua turmis! Per aumento de cachacis, eu reclamis. Si u
+                    mundo tá muito paradis? Toma um mé que o mundo vai girarzis!</p>
+
+                <!--Links(github + curriculo) e dados do github-->
+                <div class="about-buttons-data">
+
+                    <!-- links-->
+                    <div class="buttons-container">
+                        <a href="#" target="_blank" class="botao">GitHub</a>
+                        <a href="#" target="_blank" class="botao-outline">Currículo</a>
+                    </div>
+
+                    <!-- dados do github-->
+                    <div class="data-container">
+                        <!--Número de Seguidores-->
+                        <div class="data-item">
+                            <span class="data-number">100</span>
+                            <span class="data-label">Seguidores</span>
+                        </div>
+
+                        <!--Número de repositórios Públicos-->
+                        <div class="data-item">
+                            <span class="data-number">25</span>
+                            <span class="data-label">Repositórios</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </article>
+
+        </section>
+
+        <!--Seção Projetos -->
+        <section id="projects" class="section-container projects-container">
+            <h2>Meus Projetos</h2>
+
+            <!-- Swiper Container -->
+            <div class="swiper projects-swiper">
+                <div class="swiper-wrapper">
+
+                    <figure class="swiper-slide">
+
+                        <article class="project-card">
+
+                            <!-- Ícone da Tecnologia padrão do projeto -->
+                            <figure class="project-image">
+                                <img src="./assets/icons/languages/github.svg" alt="Ícone do GitHub">
+                            </figure>
+
+                            <!-- Conteúdo do Projeto -->
+                            <div class="project-content">
+
+                                <h3>Projeto GitHub</h3>
+                                <p>Projeto desenvolvido no GitHub</p>
+
+                                <!-- Tags do Projeto -->
+                                <div class="project-tags">
+                                    <span class="tag">GitHub</span>
+                                </div>
+
+                                <!-- Links do Projeto -->
+                                <div class="project-buttons">
+                                    <a href="#" target="_blank" class="botao botao-sm">
+                                        GitHub
+                                    </a>
+                                    <a href="#" target="_blank" class="botao-outline botao-sm">
+                                        Deploy
+                                    </a>
+                                </div>
+
+                            </div>
+
+                        </article>
+
+                </div>
+
+            </div>
+
+            <!-- Botões de Navegação -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+
+            <!-- Paginação -->
+            <div class="swiper-pagination"></div>
+
+            </div>
+        </section>
+
+        <!--Seção Contato -->
+        <section id="contacts" class="section-container contacts-container">
+            <!-- Redes Sociais -->
+            <article> 
+                <h2>Entre em Contato</h2>
+                <p>Se você deseja entrar em contato comigo, sinta-se à vontade para me enviar uma mensagem através do formulário abaixo ou me encontrar nas redes sociais. Estou sempre aberto a novas oportunidades e colaborações. Vamos conversar!</p>   
+                <div class="social-container">
+                    <a href="#" target="_blank" aria-label="Link do GitHub">
+                        <img src="./assets/icons/social/github.svg" alt="Link do GitHub">
+                    </a>
+
+                    <a href="#" target="_blank" aria-label="Link do Linkedin">
+                        <img src="./assets/icons/social/linkedin.svg" alt="Link do Linkedin">
+                    </a>
+
+                    <a href="#" target="_blank" aria-label="Link do Instagram">
+                        <img src="./assets/icons/social/instagram.svg" alt="Link do Instagram">
+                    </a>
+                </div>
+            </article>
+
+            <!-- Formulário de Contato -->
+            <form id="formulario">
+                <label for="nome">Nome:</label>
+                <input id="nome" name="nome" type="text" placeholder="Digite seu nome" required>
+                <span id="erro-nome"></span>
+
+                <label for="email">Email:</label>
+                <input id="email" name="email" type="email" placeholder="Digite seu email" required>
+                <span id="erro-email"></span>
+
+                <label for="assunto">Assunto:</label>
+                <input id="assunto" name="assunto" type="text" placeholder="Digite o assunto" required>
+                <span id="erro-assunto"></span>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem" required></textarea>
+                <span id="erro-mensagem"></span>
+
+                <button type="submit" class="botao">Enviar</button>
+
+            </form>
+        </section>
+    </main>
+
+    <!--Rodapé da Página-->
+    <footer>
+Desenvolvido por João Vitor Diniz - 2026
+    </footer>
+</body>
+
+</html>
