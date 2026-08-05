@@ -86,7 +86,7 @@ Para executar o projeto em ambiente local, siga os passos abaixo.
 2. Acesse a pasta do projeto:
  
    ```bash
-   cd portfolio_tjs13
+   cd portfolio
    ```
  
 3. Abra o projeto no Visual Studio Code:
