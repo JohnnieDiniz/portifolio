@@ -671,3 +671,117 @@ footer {
         font-size: var(--text-xl);
     }
 }
+
+/* Responsividade Tablet */
+ 
+@media screen and (max-width: 1024px) {
+ 
+  .section-container {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+ 
+  .section-container h1 {
+    font-size: var(--text-3xl);
+  }
+ 
+  .section-container h2 {
+    font-size: var(--text-2xl);
+  }
+ 
+  .section-container p {
+    font-size: var(--text-base);
+  }
+ 
+  .section-container span {
+    font-size: var(--text-lg);
+  }
+ 
+  .success-content h1 {
+    font-size: var(--text-3xl);
+  }
+ 
+  .success-content h2 {
+    font-size: var(--text-lg);
+  }
+ 
+  #titulo{
+    font-size: var(--text-xl);
+  }
+ 
+  @media screen and (max-width: 768px){
+    .menu-list{
+      display: none;
+    }
+  }
+ 
+  /* Responsividade Tablet - Seção Hero */
+ 
+  .hero-container{
+    flex-direction: column-reverse;
+    gap: var(--spacing-lg);
+    min-height: 60vh;
+    text-align: center;
+  }
+ 
+  .hero-content,
+  .hero-image{
+    width: 90%;
+  }
+ 
+  .hero-image img{
+    object-fit: cover;
+  }
+ 
+  .buttons-container{
+    justify-content: center;
+    width: 100%;
+  }
+ 
+  .hero-container .botao,
+  .hero-container .botao-outline{
+    padding: 0.75rem 1.5rem;
+    font-size: var(--text-base);
+    white-space: nowrap;
+  }
+ 
+/* Responsividade Tablet Seção About*/
+ 
+.about-container{
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  margin: var(--spacing-lg);
+  padding: var(--spacing-lg);
+}
+ 
+.about-image{
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  width: 100%;
+}
+ 
+.about-image img{
+  max-width: 16rem;
+  width: 100%;
+}
+ 
+.about-content{
+  width: 100%;
+}
+ 
+.about-buttons-data{
+  flex-direction: column;
+  gap: var(--spacing-md);
+  align-items: stretch;
+}
+ 
+.about-buttons-data .botao{
+  margin-right: 0;
+}
+ 
+.data-container {
+  justify-content: center;
+  width: 100%;
+}
+ 
+}
