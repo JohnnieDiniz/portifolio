@@ -1,11 +1,11 @@
-*{
-    margin: 0;
-    padding:0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    text-decoration: none;
-    outline: none;
+* {
+margin: 0;
+padding: 0; 
+box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
+font-weight: 400;
+text-decoration: none;
+outline: none;
 }
 
 /* Variáveis */
@@ -64,38 +64,39 @@
     --transition-default: all 0.3s ease;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-body{
+body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     background-color: var(--white);
-    line-height: 1.6;
     color: var(--black);
-
+    font-size: var(--text-base);
+    line-height: 1.6;
 }
 
-main{
+main {
     flex: 1;
+    padding: var(--spacing-md);
 }
 
-.section-container{
+.section-container {
     max-width: 70rem;
     margin: 0 auto;
     padding: var(--spacing-xl) var(--spacing-md);
     scroll-margin-top: 6rem;
 }
 
-.buttons-container{
+.buttons-container {
     display: flex;
     gap: var(--spacing-sm);
 }
 
 .botao,
-.botao-outline{
+.botao-outline {
     display: inline-block;
     padding: 0.75rem 2rem;
     border: 0.15rem solid transparent;
@@ -107,30 +108,33 @@ main{
     transition: var(--transition-default);
 }
 
-.botao{
-    background-color: var(--purple-700);
-    color: var(--purple-500);
+.botao {
+    border-color: var(--purple-700);
+    background-color: var(--purple-500);
     color: var(--white);
 }
-.botao:hover{
+
+.botao:hover {
     border-color: var(--purple-800);
     background-color: var(--purple-700);
     box-shadow: var(--shadow-md);
-    transform: translateY(-0.75px);
-
+    transform: translateY(-0.25rem);
 }
 
-.botao-outline{
+.botao-outline {
+    border-color: var(--purple-700);
     background-color: transparent;
     color: var(--purple-700);
-    border: 0.15rem solid var(--purple-700);
 }
-.botao-outline:hover{
-    background-color: var(--purple-700);
+
+.botao-outline:hover {
     border-color: var(--purple-700);
+    background-color: var(--purple-500);
     color: var(--white);
-    transform: translateY(-0.25px);
+    transform: translateY(-0.25rem);
 }
+
+/* Botões pequenos - Card Projetos */
  
 .botao.botao-sm,
 .botao-outline.botao-sm {
@@ -139,84 +143,83 @@ main{
   border-width: 0.125rem;
   border-radius: 0.25rem;
   font-size: var(--text-sm);
-
 }
- 
+
 header{
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    width: 100%;
-    height: 5rem;
-    border-bottom: var(--spacing-xs) solid var(--gray-200);
-    box-shadow: var(--purple-800);
-    background-color: var(--purple-800);
+   position: sticky;
+   top: 0;
+   z-index: 1000;
+   width: 100%;
+   height: 5rem;
+   border-bottom: var (--spacing-xs) solid var(--gray-200);
+   box-shadow: var(--purple-800);
+   background-color: var(--purple-800);
 }
 
-header a{
-    font-weight: 600;
+header a {
     color: var(--white);
     transition: color 0.3s ease;
+    font-weight: 600;
 }
 
-header a:hover{
+header a:hover {
     color: var(--purple-100);
 }
 
-#titulo{
+#titulo {
     font-size: var(--text-2xl);
     font-weight: 700;
-    color: var(--white);
 }
 
-.menu-content{
+.menu-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
     max-width: 70rem;
+    height: 100%;
+    margin: 0 auto;
     padding: 0 var(--spacing-md);
 }
 
-.menu-list{
+.menu-list {
     display: flex;
-    gap: var(--spacing-lg);
+    gap: var(--spacing-md);
     list-style: none;
-
 }
 
-.menu-list a{
+.menu-list a {
     padding: var(--spacing-xs);
 }
 
-.hero-container{
+/* Seção Hero*/
+.hero-container {
     display: flex;
     align-items: center;
     gap: var(--spacing-2xl);
     min-height: calc(100vh - 5rem);
 }
 
-.hero-content{
+.hero-content {
     display: flex;
     flex: 1;
     flex-direction: column;
-    gap: var(--spacing-md)
+    gap: var(--spacing-md);
 }
 
-.hero-content span{
+.hero-content span {
     font-size: var(--text-xl);
     font-weight: 700;
 }
 
-.hero-content h1{
+.hero-content h1 {
     font-size: var(--text-3xl);
     font-weight: 700;
-
 }
 
-.hero-content p,
+/* configura todos os parágrafos */
+.hero-content p, 
 .about-content p,
-.contact-info p{
+.contact-info p {
     font-size: var(--text-lg);
     color: var(--gray-400);
 }
@@ -260,6 +263,15 @@ header a:hover{
     flex-direction: row;
     align-items: center;
     gap: var(--spacing-2xl);
+}
+
+.about-content h2,
+.projects-container h2,
+.contact-info h2 {
+    margin-bottom: var(--spacing-md);
+    font-size: var(--text-3xl);
+    font-weight: 700;
+    color: var(--purple-800);
 }
 
 /* Imagem de perfil */
@@ -783,5 +795,303 @@ footer {
   justify-content: center;
   width: 100%;
 }
- 
+
+/* Responsividade Tablet - Seção Projects */
+
+.projects-container{
+    margin: var(--spacing-sm) var(--spacing-lg);
+}
+
+.projects-swiper{
+    margin: 0;
+    padding: var(--spacing-sm) var(--spacing-lg) 2.5rem;
+}
+
+.project-card{
+    width: 100%;
+    height: 30rem;
+    min-height: 30rem;
+    max-height: 30rem;
+    max-width: 100rem;
+}
+
+.project-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.project-content p{
+    flex: 1;
+    overflow: hidden;
+}
+
+.project-tags{
+    min-height: 2.5rem;
+    align-items: flex-start;
+}
+
+.swiper-wrapper{
+    align-items: stretch;
+}
+
+.swiper-slide{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    height: auto;
+}
+
+.swiper-button-next,
+.swiper-button-prev{
+    display: none;
+}
+
+ /*Responsividade Tablet - Seção Contact */
+
+ .contact-container{
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    width: 90%;
+    margin: 0 auto;
+ }
+
+  /*Responsividade Tablet - Seção Sucess */
+
+  .success-container{
+    padding: var(--spacing-xl) var(--spacing-md);
+    min-height: calc(100vh - 100rem);
+  }
+
+  .success-content{
+    gap: var(--spacing-lg);
+    max-width: 35rem;
+  }
+
+  .success-icon{
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .success-icon img{
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+/* Responsividade - Celular */
+@media screen and (max-width: 480px) {
+
+    /* Layout */
+    .section-container {
+        padding: var(--spacing-md) var(--spacing-sm);
+    }
+
+    /* Tipografia Mobile */
+    .section-container h1 {
+        font-size: var(--text-xl);
+    }
+
+    .section-container h2 {
+        font-size: var(--text-xl);
+    }
+
+    .section-container p {
+        font-size: var(--text-base);
+    }
+
+    .section-container span {
+        font-size: var(--text-lg);
+    }
+
+    .success-content h1 {
+        font-size: var(--text-xl);
+    }
+
+    .success-content h2 {
+        font-size: var(--text-base);
+    }
+
+    /* Header */
+    #titulo {
+        font-size: var(--text-xl);
+    }
+
+    .menu-list {
+        display: none;
+    }
+
+    /* Hero */
+    .hero-container {
+        gap: var(--spacing-sm);
+    }
+
+    .hero-content {
+        gap: var(--spacing-xs);
+        width: 100%;
+    }
+
+    .buttons-container {
+        flex-direction: column;
+        gap: 0.75rem;
+        width: 100%;
+    }
+
+    .buttons-container .botao,
+    .buttons-container .botao-outline {
+        width: 100%;
+    }
+
+    .hero-container .botao,
+    .hero-container .botao-outline {
+        padding: 0.75rem 1rem;
+        font-size: var(--text-base);
+        white-space: nowrap;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero-image img {
+        max-width: 20rem;
+    }
+
+    /* About */
+    .about-container {
+        margin: var(--spacing-lg) 0.5rem;
+        padding: var(--spacing-md);
+    }
+
+    .about-image img {
+        max-width: 14rem;
+    }
+
+    .about-buttons-data .botao,
+    .about-buttons-data .botao-outline {
+        width: 100%;
+        padding: 0.75rem var(--spacing-lg);
+        font-size: var(--text-base);
+        text-align: center;
+    }
+
+    .data-number {
+        font-size: var(--text-lg);
+    }
+
+    .data-label {
+        font-size: var(--text-sm);
+    }
+
+    /* Projects */
+    .projects-container {
+        margin: var(--spacing-lg) auto 0;
+    }
+
+    .projects-swiper {
+        position: relative;
+        margin: 0;
+        padding: var(--spacing-sm) 0 2rem 0;
+        overflow: visible;
+    }
+
+    .project-card {
+        width: 100%;
+        height: 20rem;
+        max-width: 20rem;
+    }
+
+    .project-image {
+        height: 10rem;
+    }
+
+    .project-content {
+        padding: var(--spacing-md);
+    }
+
+    .project-content h3 {
+        font-size: var(--text-lg);
+    }
+
+    .project-content p {
+        font-size: var(--text-base);
+    }
+
+    /* Contact */
+    .contact-container {
+        width: 100%;
+    }
+
+    .contact-info p {
+        margin-bottom: var(--spacing-md);
+    }
+
+    .social-container {
+        flex-wrap: wrap;
+        gap: var(--spacing-lg);
+        margin-bottom: var(--spacing-xs);
+    }
+
+    .social-icon {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    /* Formulário */
+    form {
+        gap: var(--spacing-sm);
+    }
+
+    form label {
+        font-size: var(--text-base);
+    }
+
+    form input,
+    form textarea {
+        padding: 0.75rem;
+        font-size: var(--text-base);
+    }
+
+    form button {
+        padding: 0.75rem var(--spacing-md);
+        font-size: var(--text-base);
+    }
+
+    /* Footer */
+    footer {
+        padding: var(--spacing-md) var(--spacing-sm);
+        font-size: var(--text-sm);
+    }
+    
+    /* Success Page */
+    .success-container {
+        padding: var(--spacing-lg) var(--spacing-sm);
+        min-height: calc(100vh - 8rem);
+    }
+
+    .success-content {
+        gap: var(--spacing-md);
+        max-width: 100%;
+        padding: var(--spacing-md) var(--spacing-sm) var(--spacing-lg);
+    
+    }
+
+    .success-icon {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .success-icon img {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .success-content .botao {
+        width: 100%;
+        max-width: 20rem;
+        padding: 0.75rem var(--spacing-lg);
+        
+    }
+
 }
