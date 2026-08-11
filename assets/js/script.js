@@ -12,7 +12,7 @@ const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,3}$/;
 async function getAboutGithub() {
     try {
 
-        const resposta = await fetch('https://api.github.com/users/marypraxedes')
+        const resposta = await fetch('https://api.github.com/users/JohnnieDiniz')
 
         const perfil = await resposta.json()
 
@@ -85,7 +85,7 @@ async function getAboutGithub() {
 async function getProjectsGitHub() {
     try {
 
-        const resposta = await fetch('https://api.github.com/users/marypraxedes/repos?sort=update&per_page=6')
+        const resposta = await fetch('https://api.github.com/users/JohnnieDiniz/repos?sort=update&per_page=6')
 
         const respositorios = await resposta.json()
 
