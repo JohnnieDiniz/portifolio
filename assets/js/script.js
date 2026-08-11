@@ -1,23 +1,22 @@
-//Selecionar a Seção about
-const about = document.querySelector('#about');
+// Selecionar a Seção About
+const about = document.querySelector("#about")
 
-//Selecionar a Seção Projects
+// Selecionar a Seção Projects
 const swiperWrapper = document.querySelector(".swiper-wrapper")
 
-// Formulário
-const formulario = document.querySelector('#formulario')
+const formulario = document.querySelector('#formulario');
 
-// Expressão Regular de validação do e-mail
-const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,3}$/;
 
-//Função para construir o about
-async function getAboutGitHub() {
+// Função para construir a seção about
+async function getAboutGithub() {
     try {
-        const resposta = await fetch('https:api.github.com/users/JohnnieDiniz');
 
-        const perfil = await resposta.json();
+        const resposta = await fetch('https://api.github.com/users/marypraxedes')
 
-        //console.log(perfil);
+        const perfil = await resposta.json()
+
+        //console.log(perfil)
 
         about.innerHTML = ''
 
@@ -71,22 +70,24 @@ async function getAboutGitHub() {
 
     </div>
 
-  </article> `
+  </article>  `
+
 
 
 
     } catch (error) {
-        console.error('Erro ao buscar dados no GitHub', error);
+        console.error("Erro ao buscar dados no GitHub", error)
     }
+
 }
 
-//Função para a construção do Carrossel com o Swiper
+// Função para construção do Carrossel com o Swipper
 async function getProjectsGitHub() {
     try {
 
-        const resposta = await fetch('https:api.github.com/users/JohnnieDiniz/repos?sort=update&per_page=6');
+        const resposta = await fetch('https://api.github.com/users/marypraxedes/repos?sort=update&per_page=6')
 
-        const repositorios = await resposta.json();
+        const respositorios = await resposta.json()
 
         swiperWrapper.innerHTML = ''
 
@@ -108,95 +109,64 @@ async function getProjectsGitHub() {
             'GitHub': 'github',
         }
 
-        repositorios.forEach((repositorio) => {
+        respositorios.forEach((repositorio) => {
 
-            //Seleciona o nome da linguagem padrão do repositório
+            // Seleciona o nome da linguagem padrão do repositório
             const linguagem = repositorio.language || 'GitHub'
 
-            //Sleciona o ícone da linguagem padrão
+            // Seleciona o icone da linguagem padrão
             const icone = linguagens[linguagem] ?? linguagens['GitHub']
 
-            //Construir o link do ícone
-            const urlIcone = `./assets/icons/languages/${icone}.svg`
+            // Construir o icone do link
+            const urlIcone = `./assets/icons/languages/${icone}.svg`;
 
-            // Formata o Nome do Repositório
             const nomeFormatado = repositorio.name
-                .replace(/[-_]/g, ' ') // Substitui hifens e underlines por espaços em branco
-                .replace(/[^a-zA-Z0-9\s]/g, '') // Remove Caracteres especiais
-                .replace(/\s+t[a-z0-9]+$/i, '') // Remove a identificação de turma
-                .toUpperCase() // Converte a string em letras maiúsculas
+                .replace(/[-_]/g, ' ')
+                .replace(/[^a-zA-Z0-9\s]/g, '')
+                .replace(/\s+t[a-z0-9]+$/i, '')
+                .toUpperCase();
 
-            // Função para truncar texto
-            // Se a descrição possuir mais de 100 carcateres
-            // seleciona os primeiros 97 e acrescenta '...' no final
-            // Senão retorna o mesmo texto
             const truncar = (texto, limite) => texto.length > limite
                 ? texto.substring(0, limite) + '...'
-                : texto
+                : texto;
 
-            //Construindo a descrição do card
-            const descricao = repositorio.description ? truncar(repositorio.description, 100)
-                : 'Projeto desenvolvido no GitHub'
+            const descricao = repositorio.description
+                ? truncar(repositorio.description, 100)
+                : 'Projeto desenvolvido no GitHub';
 
-            // tags
             const tags = repositorio.topics?.length > 0
                 ? repositorio.topics.slice(0, 3).map(topic => `<span class="tag">${topic}</span>`).join('')
                 : `<span class="tag">${linguagem}</span>`;
 
-            //Cria o botão Deploy
-
             const botaoDeploy = repositorio.homepage
                 ? `<a href="${repositorio.homepage}" target="_blank" class="botao-outline botao-sm">Deploy</a>`
-                : ''
+                : '';
 
-            // Botões de ação
-            const botoesAcao = `
-      <div class="project-buttons">
-      <a href="${repositorio.html_url}" target="_blank" class="botao botao-sm">
-            GitHub
-      </a>
-          ${botaoDeploy}
-      </div>
-      `;
-
-            // Constrói o Card
             swiperWrapper.innerHTML += `
-<div class="swiper-slide">
- 
-            <article class="project-card">
- 
-              <!-- Ícone da Tecnologia padrão do projeto -->
-<figure class="project-image">
-<img src="${urlIcone}"
-                     alt="Ícone - ${linguagem} - Linguagem principal do projeto"
->
-</figure>
- 
-              <!-- Conteúdo do Projeto -->
-<div class="project-content">
- 
-                <h3>${nomeFormatado}</h3>
-<p>${descricao}</p>
- 
-                <!-- Tags do Projeto -->
-<div class="project-tags">
-                  ${tags}
-</div>
- 
-                ${botoesAcao}
- 
-              </div>
- 
-            </article>
- 
-          </div>
-      `
-        })
+                <div class="swiper-slide">
+                    <article class="project-card">
+                        <figure class="project-image">
+                            <img src="${urlIcone}" alt="Ícone ${linguagem}">
+                        </figure>
+                        <div class="project-content">
+                            <h3>${nomeFormatado}</h3>
+                            <p>${descricao}</p>
+                            <div class="project-tags">${tags}</div>
+                            <div class="project-buttons">
+                                <a href="${repositorio.html_url}" target="_blank" class="botao botao-sm">GitHub</a>
+                                ${botaoDeploy}
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            `;
+        });
 
-        iniciarSwiper()
+        // INICIA O SWIPER SOMENTE APÓS RENDERIZAR OS SLIDES NO DOM
+        iniciarSwiper();
 
     } catch (error) {
-        console.error("Erro ao buscar os dados dos projetos do GitHub", error)
+        console.error('Erro ao buscar os dados dos projetos no GitHub:', error);
     }
 }
 
@@ -205,111 +175,75 @@ function iniciarSwiper() {
         slidesPerView: 1,
         slidesPerGroup: 1,
         spaceBetween: 24,
-        centeredSlides: false,
         loop: true,
         watchOverflow: true,
-
         breakpoints: {
-            0: {
-                slidesPerView: 1,
-                slidesPerGroup: 1,
-                spaceBetween: 40,
-                centeredSlides: false,
-            },
-            769: {
-                slidesPerView: 2,
-                slidesPerGroup: 2,
-                spaceBetween: 40,
-                centeredSlides: false,
-            },
-            1025: {
-                slidesPerView: 3,
-                slidesPerGroup: 3,
-                spaceBetween: 54,
-                centeredSlides: false,
-            },
+            0: { slidesPerView: 1, slidesPerGroup: 1, spaceBetween: 40 },
+            769: { slidesPerView: 2, slidesPerGroup: 2, spaceBetween: 40 },
+            1025: { slidesPerView: 3, slidesPerGroup: 3, spaceBetween: 54 },
         },
-
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
-
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
             dynamicBullets: true,
         },
-
         autoplay: {
             delay: 5000,
             pauseOnMouseEnter: true,
             disableOnInteraction: false,
         },
-
         grabCursor: true,
-        slidesOffsetBefore: 0,
-        slidesOffsetAfter: 0,
-    })
+    });
 }
 
+// Execução
 formulario.addEventListener('submit', function (event) {
-    event.preventDefault()
+    event.preventDefault(); // Impede o envio imediato para validar primeiro
 
-    document
-        .querySelectorAll('form span')
-        .forEach((span) => (span.innerHTML = ''))
+    // Limpa erros anteriores
+    document.querySelectorAll('.form-field span').forEach((span) => (span.innerHTML = ''));
 
-    let isValid = true
+    let isValid = true;
 
-    const nome = document.querySelector('#nome')
-    const erroNome = document.querySelector('#erro-nome')
-
+    // Validações...
+    const nome = document.querySelector('#nome');
+    const erroNome = document.querySelector('#erro-nome');
     if (nome.value.trim().length < 3) {
-        erroNome.innerHTML = 'O nome deve ter no mínimo 3 caracteres'
-        if (isValid) nome.focus()
-        isValid = false
+        erroNome.innerHTML = 'O nome deve ter no mínimo 3 caracteres';
+        if (isValid) nome.focus();
+        isValid = false;
     }
 
-    const email = document.querySelector('#email')
-    const erroEmail = document.querySelector('#erro-email')
-
+    const email = document.querySelector('#email');
+    const erroEmail = document.querySelector('#erro-email');
     if (!email.value.trim().match(emailRegex)) {
-        erroEmail.innerHTML = 'Digite um endereço de e-mail válido'
-        if (isValid) email.focus()
-        isValid = false
+        erroEmail.innerHTML = 'Digite um endereço de e-mail válido';
+        if (isValid) email.focus();
+        isValid = false;
     }
 
-    const assunto = document.querySelector('#assunto')
-    const erroAssunto = document.querySelector('#erro-assunto')
-
-    if (assunto.value.trim().length < 5) {
-        erroAssunto.innerHTML =
-            'O assunto deve ter no mínimo 5 caracteres'
-        if (isValid) assunto.focus()
-        isValid = false
-    }
-
-    const mensagem = document.querySelector('#mensagem')
-    const erroMensagem = document.querySelector('#erro-mensagem')
-
+    const mensagem = document.querySelector('#mensagem');
+    const erroMensagem = document.querySelector('#erro-mensagem');
     if (mensagem.value.trim().length === 0) {
-        erroMensagem.innerHTML = 'A mensagem não pode ser vazia'
-        if (isValid) mensagem.focus()
-        isValid = false
+        erroMensagem.innerHTML = 'A mensagem não pode ser vazia';
+        if (isValid) mensagem.focus();
+        isValid = false;
     }
 
+    // Se passou na validação, envia pro FormSubmit
     if (isValid) {
-        const submitButton = formulario.querySelector(
-            'button[type="submit"]',
-        )
-        submitButton.disabled = true
-        submitButton.textContent = 'Enviando...'
+        const submitButton = formulario.querySelector('button[type="submit"]');
+        submitButton.disabled = true;
+        submitButton.textContent = 'Enviando...';
 
-        formulario.submit()
+        // Dispara o envio do formulário HTML nativo
+        HTMLFormElement.prototype.submit.call(formulario);
     }
-})
+});
 
-getAboutGitHub();
-
+getAboutGithub()
 getProjectsGitHub();
