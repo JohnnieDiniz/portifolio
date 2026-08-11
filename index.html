@@ -1,260 +1,208 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
+	<head>
 
-<head>
+    <!-- Fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <!-- Fontes do Google -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Fonte do Google - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
-  <!-- Fonte do Google - Poppins -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="João Vitor" />
 
-  <meta name="author" content="João Vitor Diniz">
-
-  <meta name="description" content="Portfólio Pessoal do João Vitor Diniz, 
+		<meta
+			name="description"
+			content="Portfólio Pessoal do João Vitor, 
                 desenvolvedor Full Stack especializado em criar experiências 
-                digitais incríveis. Conheça meus projetos e entre em contato.">
+                digitais incríveis. Conheça meus projetos e entre em contato."
+		/>
 
-  <meta name="robots" content="index, follow">
+		<meta name="robots" content="index, follow" />
 
-  <link rel="icon" type="image/svg+xml" href="./assets/img/favicon.svg">
+		<link
+			rel="icon"
+			type="image/svg+xml"
+			href="./assets/img/favicon.svg"
+		/>
 
-  <!-- CSS principal da página -->
-  <link rel="stylesheet" href="./assets/css/styles.css">
+    <!-- SWIPER CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
-  <title>Portfólio do João Vitor</title>
-</head>
+    <!-- CSS principal da página -->
+    <link rel="stylesheet" href="./assets/css/styles.css">
 
-<body>
-  <!-- Cabeçalho da Página -->
+		<title>Portfólio do João Vitor</title>
+	</head>
+	<body>
+		<!-- Cabeçalho da Página -->
+		<header>
 
-  <header>
-    <div class="menu-content">
-      <!-- Título do cabeçalho -->
-      <a href="index.html" id="titulo">Portfólio do João Vitor Diniz</a>
+			<div class="menu-content">
 
-      <!-- Menu de Navegação -->
-      <nav>
-        <ul class="menu-list">
-          <li><a href="#hero">Inicio</a></li>
-          <li><a href="#about">Sobre</a></li>
-          <li><a href="#projects">Projetos</a></li>
-          <li><a href="#contacts">Contatos</a></li>
-        </ul>
-      </nav>
+				<!-- Título do cabeçalho -->
+				<a href="index.html" id="titulo">Portfólio</a>
 
-    </div>
+				<!-- Menu de Navegação -->
+				<nav>
+					<ul class="menu-list">
+						<li><a href="#hero">Início</a></li>
+						<li><a href="#about">Sobre</a></li>
+						<li><a href="#projects">Projetos</a></li>
+						<li><a href="#contacts">Contatos</a></li>
+					</ul>
+				</nav>
 
-  </header>
+			</div>
 
-  <!--Seção Principal da Página -->
-  <main>
-    <!-- Seção Hero -->
-    <section id="hero" class="section-container hero-container">
-      <!-- Boas Vindas -->
-      <article>
-        <span>👋 Olá, eu sou o João Vitor</span>
-        <h1>Desenvolvedor Full Stack</h1>
-        <p>Transformo ideias em código e crio experiências digitais incríveis.</p>
+		</header>
 
-        <div class="buttons container">
-          <a href="#contacts" class="botao">Entre em contato</a>
-          <a href="#about" class="botao-outline">Saiba mais...</a>
+		<!-- Seção Principal da Página -->
+		<main>
 
-        </div>
-      </article>
+			<!-- Seção Hero -->
+			<section id="hero" class="section-container hero-container">
 
-      <!-- Imagem da Seção Hero -->
-      <figure class="hero-image">
-        <img src="./assets/img/foto_dev_man.svg"  alt="Foto do autor do site" class="float-animation">
-      </figure>
+        <!-- Boas Vindas -->
+        <article class="hero-content">
 
-    </section>
+          <span>👋 Olá, eu sou o João Vitor</span>
+          <h1>Desenvolvedor Full Stack</h1>
+          <p>Transformo ideias em
+              código e crio experiências digitais incríveis.</p>
 
-    <!-- Seção Sobre mim -->
-<section id="about" class="section-container about-container">
-
-  <!-- Imagem da Seção About -->
-  <figure class="about-image">
-    <img src="./assets/img/avatar_dev_man.svg" alt="Foto - Perfil do autor do site">
-  </figure>
-
-  <!-- Conteúdo da Seção About -->
-  <article class="about-content">
-
-    <h2>Sobre mim</h2>
-
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias dolorum maiores,
-      quaerat ut laborum perferendis nostrum similique quisquam recusandae explicabo.
-      Non ducimus possimus expedita sunt corrupti, mollitia aliquid praesentium quaerat?
-    </p>
-
-    <p>
-      Mussum Ipsum, cacilds vidis litro abertis. Mauris nec dolor in eros commodo tempor.
-      Aenean aliquam molestie leo, vitae iaculis nisl. Paisis, filhis, espiritis santis.
-      Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi.
-      Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis.
-    </p>
-
-    <!-- Botões + Dados do GitHub -->
-    <div class="about-buttons-data">
-
-      <!-- Botões -->
-      <div class="buttons-container">
-        <a href="https://github.com/JohnnieDiniz"
-           target="_blank"
-           class="botao">
-          GitHub
-        </a>
-
-        <a href="https://acrobat.adobe.com/id/urn:aaid:sc:VA6C2:f6b0b42e-aed5-44eb-934d-fe1e2313b5d6?x_api_client_id=chrome_extension_viewer&x_api_client_location=share"
-           target="_blank"
-           class="botao-outline">
-          Currículo
-        </a>
-      </div>
-
-      <!-- Dados do GitHub -->
-      <div class="data-container">
-
-        <!-- Seguidores -->
-        <div class="data-item">
-          <span class="data-number">100</span>
-          <span class="data-label">Seguidores</span>
-        </div>
-
-        <!-- Repositórios -->
-        <div class="data-item">
-          <span class="data-number">10</span>
-          <span class="data-label">Repositórios</span>
-        </div>
-
-      </div>
-
-    </div>
-
-  </article>
-
-</section>
-
-    <!-- Seção de Projetos -->
-    <section id="projects" class="section-container projects-container">
-      <h2>Meus Projetos</h2>
-
-      <!-- Swiper Container -->
-      <div class="swiper projects-swiper">
-        <div class="swiper-wrapper">
-
-          <div class="swiper-slide">
-
-            <article class="project-card">
-
-              <!-- Ícone da Tecnologia padrão do projeto -->
-              <figure class="project-image">
-                <img src="./assets/icons/languages/github.svg" alt="Ícone do GitHub">
-              </figure>
-
-              <!-- Conteúdo do Projeto -->
-              <div class="project-content">
-
-                <h3>Projeto GitHub</h3>
-                <p>Projeto desenvolvido no GitHub</p>
-
-                <!-- Tags do Projeto -->
-                <div class="project-tags">
-                  <span class="tag">GitHub</span>
-                </div>
-
-                <!-- Links do Projeto -->
-                <div class="project-buttons">
-                  <a href="#" target="_blank" class="botao botao-sm">
-
-                    GitHub
-                  </a>
-                  <a href="#" target="_blank" class="botao-outline botao-sm">
-
-                    Deploy
-                  </a>
-                </div>
-
-              </div>
-
-            </article>
+          <div class="buttons-container">
+            <a href="#contacts" class="botao">Entre em contato</a>
+            <a href="#about" class="botao-outline">Saiba mais...</a>
           </div>
+
+        </article>
+
+        <!-- Imagem da Seção Hero -->
+        <figure class="hero-image">
+          <img 
+            src="https://ik.imagekit.io/JohnnieDiniz/portifolio/ChatGPT%20Image%2011%20de%20ago.%20de%202026,%2015_05_29.png"
+            alt="Foto do autor do site"
+            class="float-animation"
+          >
+        </figure>
+
+      </section>
+
+			<!-- Seção Sobre mim -->
+			<section id="about" class="section-container about-container">
+
+          
+
+      </section>
+
+			<!-- Seção de Projetos -->
+			<section id="projects" class="section-container projects-container">
+
+        <h2>Meus Projetos</h2>
+
+        <!-- Swiper Container -->
+        <div class="swiper projects-swiper">
+
+          <div class="swiper-wrapper">
+
+            
+
+          </div>
+
+          <!-- Botões de Navegação -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+
+          <!-- Paginação -->
+          <div class="swiper-pagination"></div>
+
         </div>
 
-      </div>
+      </section>
 
-      <!-- Botões de Navegação -->
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
+			<!-- Seção de Contatos -->
+			<section id="contacts" class="section-container contact-container">
 
-      <!-- Paginação -->
-      <div class="swiper-pagination"></div>
+        <!-- Redes Sociais -->
+        <article class="contact-info">
 
-      </div>
+          <h2>Entre em contato</h2>
+          <p>Sinta-se à vontade para entrar em contato comigo</p>
+
+          <!-- Links para as Redes Sociais -->
+          <div class="social-container">
+
+            <a href="https://www.linkedin.com/in/joaovitordinizalves/" target="_blank" class="social-icon" aria-label="LinkedIn">
+              <img
+                src="./assets/icons/social/linkedin.svg"
+                alt="Link para o LinkedIn"
+              >
+            </a>
+
+            <a href="https://github.com/JohnnieDiniz" target="_blank" class="social-icon" aria-label="GitHub">
+              <img
+                src="./assets/icons/social/github.svg"
+                alt="Link para o GitHub"
+              >
+            </a>
+
+            <a href="https://www.instagram.com/johnnie_diniz?igsh=MWs4YXYxbmd4Mzl2OQ==" target="_blank" class="social-icon" aria-label="Instagram">
+              <img
+                src="./assets/icons/social/instagram.svg"
+                alt="Link para o Instagram"
+              >
+            </a>
+
+          </div>
+        </article>
 
 
-    </section>
+        <!-- Formulário de Contato -->
+        <form id="formulario" action="https://formsubmit.co/7065d88cfa92a310a1da3b7a5effb0c9" method="POST">
 
-    <!-- Seção de Contatos -->
-    <section id="contacts" class="section-container contacts-container">
+          <input type="hidden" name="_next" value="http://localhost:5500/success.html">
+          <input type="hidden" name="_captcha" value="false">
 
-      <!-- Redes Sociais -->
-      <article>
-        <h2>Entre em contato</h2>
-        <p>Sinsa-se à vontade para entrar em contato comigo</p>
+          <label for="nome">Nome</label>
+          <input id="nome" name="nome" type="text" placeholder="Digite o seu nome completo">
+          <span id="erro-nome"></span>
 
-        <!-- Links para as Redes Sociais -->
-        <div class="social-container">
-          <a href="https://www.linkedin.com/in/João Vitor-jos%C3%A9-nascimento-versiani-075417223/" target="_blank" class="social_icon" aria-label="Linkedin">
-            <img src="./assets/icons/social/linkedin.svg" alt="Link para o Linkedin">
-          </a>
+          <label for="email">E-mail</label>
+          <input id="email" name="email" type="text" placeholder="Digite o seu e-mail">
+          <span id="erro-email"></span>
 
+          <label for="assunto">Assunto</label>
+          <input id="assunto" name="assunto" type="text" placeholder="Digite o assunto da mensagem">
+          <span id="erro-assunto"></span>
 
-          <a href="https://github.com/João Vitorversiani" target="_blank" class="social_icon" aria-label="GitHub">
-            <img src="./assets/icons/social/github.svg" alt="Link para o GitHub">
-          </a>
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" placeholder="Digite a sua mensagem"></textarea>
+          <span id="erro-mensagem"></span>
 
+          <button class="botao" type="submit">Enviar Mensagem</button>
 
-        </div>
-      </article>
+        </form>
 
-      <!-- Formulário de Contato -->
-      <form id="formulário">
-        <label for="nome">Nome</label>
-        <input id="nome" name="nome" type="text" placeholder="Digite o seu nome completo">
-        <span id="erro-nome"></span>
+      </section>
+		</main>
 
-        <label for="email">E-mail</label>
-        <input id="email" name="email" type="text" placeholder="Digite o seu E-mail completo">
-        <span id="erro-email"></span>
+		<!-- Rodapé da Pàgina -->
+		<footer>
+      Desenvolvido por João Vitor - 2026
+    </footer>
 
-        <label for="assunto">Assunto</label>
-        <input id="assunto" name="assunto" type="text" placeholder="Digite o assunto completo">
-        <span id="erro-assunto"></span>
+    <!-- SWIPER JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-        <label for="mensagem">Mensagem</label>
-        <textarea id="mensagem" name="mensagem" placeholder="Digite a sua mensagem"></textarea>
-        <span id="erro-mensagem"></span>
-        <button class="botao" type="submit">Enviar</button>
+    <!-- Script Principal da página -->
+    <script src="./assets/js/script.js"></script>
 
-      </form>
-
-    </section>
-
-  </main>
-
-  <!-- Rodapé da Página -->
-  <footer>
-    Desenvolvido por João Vitor Diniz - 2026
-  </footer>
-
-</body>
-
+	</body>
 </html>
